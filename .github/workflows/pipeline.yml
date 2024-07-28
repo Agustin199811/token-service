@@ -19,7 +19,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD1 }}
-
       - name: Build and push token-service
         run: |
           docker build ./ -f Dockerfile -t ${{ secrets.DOCKER_HUB_USERNAME }}/token-service:latest
